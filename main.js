@@ -7,3 +7,5 @@ function getUserChoice (userInput){
         console.log('Please enter a valid choice rock, paper or scissor.');
     }
 }
+
+getUserChoice('ROCK');
