@@ -33,20 +33,24 @@ function determineWinner(userChoice, computerChoice) {
     if (userChoice === 'rock') {
         if (computerChoice === 'paper') {
             return "The Computer is the winner!";
-        }else{
+        }else if (computerChoice === 'scissors') {
             return "You are the winner!";
         }
     }
 
-    if (userChoice === 'paper' && computerChoice === 'scissors') {
-        return "The Computer is the winner!";
-    }else{
-        return "You are the winner!";
+    if (userChoice === 'paper') {
+        if (computerChoice === 'scissors'){
+            return "The Computer is the winner!";
+        }else if (computerChoice === 'rock') {
+            return "You are the winner!";
+        }
     }
 
-    if (userChoice === 'scissors' && computerChoice === 'rock') {
-        return "The Computer is the winner!";
-    }else{
-        return "You are the winner!";
+    if (userChoice === 'scissors') {
+        if (computerChoice === 'rock') {
+            return "The Computer is the winner!";
+        }else if (computerChoice === 'paper'){
+            return "You are the winner!";
+        }
     }
 }
