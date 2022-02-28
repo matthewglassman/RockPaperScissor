@@ -1,29 +1,29 @@
-// function getUserChoice (userInput){
-//     userInput = userInput.toLowerCase();
+function getUserChoice (userInput){
+    userInput = userInput.toLowerCase();
 
-//     if (userInput === 'rock' || userInput === 'paper' || userInput ==='scissors'){
-//         return userInput;
-//     }else{
-//         console.log('Please enter a valid choice rock, paper or scissor.');
-//     }
-// }
+    if (userInput === 'rock' || userInput === 'paper' || userInput ==='scissors'){
+        return userInput;
+    }else{
+        console.log('Please enter a valid choice rock, paper or scissor.');
+    }
+}
 
-// getUserChoice('ROCK');
+//getUserChoice('PAPER');
 
-// function getComputerChoice () {
-//     computerChoice = Math.floor(Math.random() * 3);
-//     console.log(computerChoice);
+function getComputerChoice () {
+    computerChoice = Math.floor(Math.random() * 3);
+//    console.log(computerChoice);
 
-//     if (computerChoice === 0) {
-//         return 'rock';
-//     } else if (computerChoice === 1) {
-//         return 'paper';
-//     } else {
-//         return 'scissors';
-//     }
-// }
+    if (computerChoice === 0) {
+        return 'rock';
+    } else if (computerChoice === 1) {
+        return 'paper';
+    } else {
+        return 'scissors';
+    }
+}
 
-// getComputerChoice();
+getComputerChoice();
 
 function determineWinner(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
@@ -54,3 +54,16 @@ function determineWinner(userChoice, computerChoice) {
         }
     }
 }
+
+function playGame () {
+    var userChoice1 = prompt('Please choose rock, paper or scissor.');
+    var userChoice = getUserChoice(userChoice1);
+    console.log(userChoice);
+    
+    var computerChoice = getComputerChoice();
+    console.log(computerChoice);
+
+    console.log(determineWinner(userChoice, computerChoice));
+}
+
+playGame();
