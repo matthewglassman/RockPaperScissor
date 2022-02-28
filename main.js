@@ -1,7 +1,7 @@
 function getUserChoice (userInput){
     userInput = userInput.toLowerCase();
 
-    if (userInput === 'rock' || userInput === 'paper' || userInput ==='scissors'){
+    if (userInput === 'rock' || userInput === 'paper' || userInput ==='scissors' || userInput === 'bomb'){
         return userInput;
     }else{
         console.log('Please enter a valid choice rock, paper or scissor.');
@@ -52,6 +52,9 @@ function determineWinner(userChoice, computerChoice) {
         }else if (computerChoice === 'paper'){
             return "You are the winner!";
         }
+    }
+    if (userChoice === 'bomb') {
+        return "Nothing beats the BOMB!  You win!";
     }
 }
 
